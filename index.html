@@ -7,6 +7,8 @@
       name="description"
       content="A simple HTML and CSS website for homework 1 of CIS-128"
     >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./index.js"></script>
     <link href="./index.css" rel="stylesheet">
     <title>Pedro Orellana</title>
   </head>
@@ -15,12 +17,20 @@
     <div class="min-h-screen bg-gray-100">
       <!-- main content container -->
       <div class="pt-10">
-        <h1 class="text-5xl text-gray-700 font-serif font-semibold text-center">
-          CIS 128
-        </h1>
-        <h1 class="text-5xl text-gray-700 font-serif font-semibold text-center">
-          Mobile Web App Dev
-        </h1>
+
+        <div class="flex flex-col items-center">
+
+          <h1 id="class_code" class="text-5xl text-gray-700 font-serif font-semibold text-center">
+            CIS 128
+          </h1>
+          <h1 id="class_name" class="text-5xl text-gray-700 font-serif font-semibold text-center">
+            Mobile Web App Dev
+          </h1>
+
+          <button id="animation_button"
+          class="bg-blue-500 text-white px-3 py-2 rounded mt-10 hover:bg-blue-600 hover:shadow-lg transition">start animation</button>
+
+        </div>
 
         <!-- bio section -->
         <section id="bio" class="bg-blue-100 py-10 my-20">
@@ -29,8 +39,9 @@
             <div class="flex w-1/2 justify-center items-center">
               <img
                 src="./picture.jpeg"
-                alt="profile picture"
+                alt="Picture of me sitting down in the rocks with the ocean in the background"
                 class="w-100 rounded-2xl"
+                id="profile_picture"
               >
             </div>
 
