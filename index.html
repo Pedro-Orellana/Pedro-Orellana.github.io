@@ -8,7 +8,28 @@
       content="A simple HTML and CSS website for homework 1 of CIS-128"
     >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./index.js"></script>
+    <script>
+      $(document).ready( () => {
+    
+        //get a reference to important DOM elements
+        const button = $("#animation_button");
+        const title = $("h1");
+        const profilePicture = $("#profile_picture");
+
+        //onClick function
+        button.on("click", () => {
+
+        //change color and size of title
+        title.css("color", "red");
+        title.animate({"font-size": "+=1rem"}, 1500);
+        title.animate({"font-size": "-=1rem"}, 1500);
+        setTimeout(() => {title.css("color", "black")}, 3000)
+
+        //add borders to profile picture
+        profilePicture.css("border", "1rem outset #32a852")
+      })
+    })
+    </script>
     <link href="./index.css" rel="stylesheet">
     <title>Pedro Orellana</title>
   </head>
